@@ -9,7 +9,7 @@
 #include "simonSpeck.h"
 #include "Simon.h"
 #include "Speck.h"
-
+#include "Equations.h"
 
 
 #define ROTL( n, X )    ( ( ( X ) << n ) | ( ( X ) >> ( 32 - n ) ) )
