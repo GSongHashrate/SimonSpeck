@@ -12,11 +12,8 @@ Jan 2014
 
 #include "StdAfx.h"
 #include "Equations.h"
+#include "simonSpeckBasic.h"
 
-#include <iostream>
-#include <fstream>
-#include "time.h"
-#include <hash_set>
 using namespace std;
 typedef stdext::hash_set<int> IntHSet;
 
