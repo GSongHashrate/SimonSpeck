@@ -10,6 +10,7 @@ Jan 2014
 // SIMON cipher equation generator
 // NSA cipher with low MC proposed by NSA
 
+
 #include "StdAfx.h"
 #include "Equations.h"
 #include "simonSpeckBasic.h"
@@ -122,7 +123,7 @@ void generateEquation(u32 PL,u32 PR,u32 CL, u32 CR, u32* key,int nn,int keysize,
 		mf << fill0(i); 
 		mf << "]\n";
 	}
-    // write key match to ek
+	// write key match to ek
 	for (int i = 0; i < keysize; i++){
 		mf << "k[";
 		mf << fill0(i);
