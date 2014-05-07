@@ -60,6 +60,7 @@ void generateEquation(u32 PL,u32 PR,u32 CL, u32 CR, u32* key,int nn,int keysize,
 	}else{
 		mf.open(buffer, ios::out | ios::app);
 	}
+	// Can output to anohter file to seperate the keys and equations.
 	// only the first P/C pair need to have the guessed key bits, the value of P/C pair
 	if (index == 0){
 		stdext::hash_set<u32> AlreadySeen;
@@ -72,7 +73,7 @@ void generateEquation(u32 PL,u32 PR,u32 CL, u32 CR, u32* key,int nn,int keysize,
 		for(it=AlreadySeen.begin();it!=AlreadySeen.end();it++){
 			mf << "k[";
 			mf << fill0(*it); mf << "]="; 
-			int tmp ;
+			int tmp = 0;
 			if (*it < 32){
 				int tmp = (key[0]>>*it%32)&1;
 				mf << tmp;

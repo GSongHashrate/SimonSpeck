@@ -33,17 +33,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	printf("%08X %08X\n",CL,CR);
 
 	// Generate equations for 8 Round Simon with 5 random fixed key bits, using 2 P/C pairs 
-	int fk = 5;
+	int fk = 128;
 	int round = 8;
-	SimonEncryptBlock64128(PL,PR,CL,CR,key,32,128,round);
+	for (int i = 0 ; i < 32; i++){
+		PL=CL;
+		PR=CR;
+		SimonEncryptBlock64128(PL,PR,CL,CR,key,32,128,round);
 
-	generateEquation(PL,PR,CL,CR,key,32,128, round, fk ,0);
-	// second P/C pair
-	PL=CL;
-	PR=CR;
-	SimonEncryptBlock64128(PL,PR,CL,CR,key,32,128,round);
-
-	generateEquation(PL,PR,CL,CR,key,32,128, round, fk ,1);
+		generateEquation(PL,PR,CL,CR,key,32,128, round, fk ,i);
+	}
 
 
 

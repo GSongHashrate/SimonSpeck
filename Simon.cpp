@@ -86,6 +86,7 @@ void SimonEncryptBlockALL(u64 PL,u64 PR,u64 &CL, u64 &CR, u64* key,int nn,int ke
 //#define ROTL( n, X )    ( ( ( X ) << n ) | ( ( X ) >> ( 32 - n ) ) )
 void SimonEncryptBlock64128(u32 PL,u32 PR,u32 &CL, u32 &CR, u32* key,int nn,int keysize,int rounds)
 {
+
 	if(nn>32) printf("not done for 48 and 64-bit words");
 	if(nn<32) printf("can work for less than 32 but ROTL must be modified");
 	u32 k[72]={0};
@@ -121,10 +122,10 @@ void SimonEncryptBlock64128(u32 PL,u32 PR,u32 &CL, u32 &CR, u32* key,int nn,int 
 		k[i]=key[i];
 	for(i = mm;     i<T;    i++)
 	{
-		u32 tmp=ROTL(-3,k[i-1]);
+		u32 tmp=ROTL((nn-3),k[i-1]);
 		if (mm == 4)
 			tmp ^= k[i-3];
-		tmp = tmp ^ ROTL(-1,tmp);
+		tmp = tmp ^ ROTL(31,tmp);
 		//is it bitwise negation?
 		k[i] = (~(k[i-mm])) ^ tmp ^ (Simonz[Cj][(i-mm) % 62]-'0') ^ 3;
 	};
