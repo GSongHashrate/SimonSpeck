@@ -31,6 +31,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	PL=0x656b696c;  PR=0x20646e75;
 	SimonEncryptBlock64128(PL,PR,CL,CR,key,32,128,44);
 	printf("%08X %08X\n",CL,CR);
+	
+	SimonDecryptBlock64128(CL,CR,PL,PR,key,32,128,44);
+	printf("%08X %08X\n",PL,PR);
 
 	// Generate equations for 8 Round Simon with 5 random fixed key bits, using 2 P/C pairs 
 	int fk = 128;
@@ -53,8 +56,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	PL=0x3b726574;  PR=0x7475432d;
 	SpeckEncryptBlock64128(PL,PR,CL,CR,key,32,128,27);
 	printf("%08X %08X\n",CL,CR);
-
-
 
 	u64 PL64,PR64,CL64,CR64;
 	u64 k[4]={0};

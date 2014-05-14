@@ -83,6 +83,41 @@ void SimonEncryptBlockALL(u64 PL,u64 PR,u64 &CL, u64 &CR, u64* key,int nn,int ke
 	CL=x;CR=y;
 }    
 
+void SimonDecryptBlock64128(u32 CL,u32 CR,u32 &PL, u32 &PR, u32* key,int nn,int keysize,int rounds){
+	u32 k[72]={0};
+	int mm=keysize/nn;
+	int Cj=0,T=0;
+
+	if (nn == 16) {T=32;Cj=0;};
+	if (nn == 24 && mm == 3) { T=36; Cj=0;};
+	if (nn == 24 && mm == 4) { T=36; Cj=1;};
+	if(mm==3 && nn==32) {T=42;Cj=2;};
+	if(mm==4 && nn==32) {T=44;Cj=3;};
+
+	int i,j=0;
+	for(i = 0;      i<mm;   i++)
+		k[i]=key[i];
+	for(i = mm;     i<T;    i++)
+	{
+		u32 tmp=ROTL((nn-3),k[i-1]);
+		if (mm == 4)
+			tmp ^= k[i-3];
+		tmp = tmp ^ ROTL(31,tmp);
+		k[i] = (~(k[i-mm])) ^ tmp ^ (Simonz[Cj][(i-mm) % 62]-'0') ^ 3;
+	};
+
+	u32 x = CL; u32 y = CR;
+	for (int i = 0; i < rounds; ++i) {
+		u32 tmp = y;
+		y = ROTL(1,y) & ROTL(8,y) ^ ROTL(2,y) ^ x ^ k[rounds-i-1];
+		x = tmp;
+	}
+
+    PL = x; PR = y;
+}
+
+
+
 //#define ROTL( n, X )    ( ( ( X ) << n ) | ( ( X ) >> ( 32 - n ) ) )
 void SimonEncryptBlock64128(u32 PL,u32 PR,u32 &CL, u32 &CR, u32* key,int nn,int keysize,int rounds)
 {

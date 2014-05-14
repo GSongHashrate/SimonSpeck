@@ -1,4 +1,4 @@
 SimonSpeck
 ==========
 
-Simon &amp; Speck block cipher open source code in C
+Simon &amp; Speck block cipher implementation open source code in C
