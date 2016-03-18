@@ -37,6 +37,9 @@ void main(int argc, char * argv[])
 	int sat=0;
 	for(int i=2;i<argc;i++) if(strstr(argv[i],"/sat"))
 		sat = 1;
+	int xl0=0;
+	for(int i=2;i<argc;i++) if(strstr(argv[i],"/xl0"))
+		xl0 = 1;
 
 	int round = Par1;
 	int fk = FixKeyVars;
@@ -192,13 +195,20 @@ void main(int argc, char * argv[])
 	char Command[1024];
 	if (sat == 1){
 		sprintf(Command, "if exist ax64.exe ax64.exe 4444 Equation_%dR_fixk%d.txt /sat", round, fk);
-	}else{
+		printf(Command);
+		printf("\n");
+		system(Command);
+	} 
+	
+	if (xl0 == 1) {
 		sprintf(Command, "if exist ax64.exe ax64.exe 4000 Equation_%dR_fixk%d.txt", round, fk);
+		printf(Command);
+		printf("\n");
+		system(Command);
 	}
 
-	printf(Command);
-	printf("\n");
-	system(Command);
+
+	
 	
 }
 
