@@ -30,6 +30,9 @@
     <ClCompile Include="Simon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CheckEquations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="simonSpeck.h">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Simon.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckEquations.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

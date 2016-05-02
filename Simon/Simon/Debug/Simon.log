@@ -1,34 +1,61 @@
-﻿Build started 18/03/2016 11:37:43.
-     1>Project "c:\Users\UCL\documents\visual studio 2010\Projects\Simon\Simon\Simon.vcxproj" on node 2 (build target(s)).
+﻿Build started 02/05/2016 02:48:19.
+     1>Project "C:\Users\UCL\Documents\Visual Studio 2010\Projects\Simon\Simon\Simon.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Simon.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt simonSpeck.cpp
-         simonSpeck.cpp
-     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\simonspeck.cpp(197): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\simonspeck.cpp(204): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CheckEquations.cpp
+         CheckEquations.cpp
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(40): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(45): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : see declaration of 'strdup'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(46): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(57): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(65): warning C4101: 'integer_string' : unreferenced local variable
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(260): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(262): warning C4129: '%' : unrecognized character escape sequence
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(351): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(353): warning C4129: '%' : unrecognized character escape sequence
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(446): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(449): warning C4129: '%' : unrecognized character escape sequence
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(483): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(498): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(493): warning C4101: 'found' : unreferenced local variable
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(530): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(545): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(540): warning C4101: 'found' : unreferenced local variable
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(579): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(594): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\users\ucl\documents\visual studio 2010\projects\simon\simon\checkequations.cpp(589): warning C4101: 'found' : unreferenced local variable
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\ucl\documents\visual studio 2010\Projects\Simon\Debug\Simon.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Simon.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\ucl\documents\visual studio 2010\Projects\Simon\Debug\Simon.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\ucl\documents\visual studio 2010\Projects\Simon\Debug\Simon.lib" /MACHINE:X86 Debug\Simon.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\UCL\Documents\Visual Studio 2010\Projects\Simon\Debug\Simon.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Simon.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\UCL\Documents\Visual Studio 2010\Projects\Simon\Debug\Simon.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\UCL\Documents\Visual Studio 2010\Projects\Simon\Debug\Simon.lib" /MACHINE:X86 Debug\Simon.exe.embed.manifest.res
+         Debug\CheckEquations.obj
          Debug\Equations.obj
          Debug\Simon.obj
          Debug\simonSpeck.obj
          Debug\Speck.obj
          Debug\stdafx.obj
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Simon.exe.embed.manifest" /manifest Debug\Simon.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Simon.exe.embed.manifest" /manifest Debug\Simon.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
          All outputs are up-to-date.
        LinkEmbedManifest:
          All outputs are up-to-date.
-         Simon.vcxproj -> c:\users\ucl\documents\visual studio 2010\Projects\Simon\Debug\Simon.exe
+         Simon.vcxproj -> C:\Users\UCL\Documents\Visual Studio 2010\Projects\Simon\Debug\Simon.exe
        FinalizeBuildStatus:
          Deleting file "Debug\Simon.unsuccessfulbuild".
          Touching "Debug\Simon.lastbuildstate".
-     1>Done Building Project "c:\Users\UCL\documents\visual studio 2010\Projects\Simon\Simon\Simon.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\UCL\Documents\Visual Studio 2010\Projects\Simon\Simon\Simon.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.21
+Time Elapsed 00:00:01.82
